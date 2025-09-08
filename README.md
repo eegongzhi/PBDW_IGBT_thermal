@@ -32,12 +32,13 @@ In this project, we run FEM simulations and generate 1271 snapshots. Each snapsh
 
 Then, we choose _N_ = 6 snapshots from the remaining 1144 snapshots to build the background space. The labels of the selected snapshots, as well as the 1st and the 5th bases of the background space, are illustrated below.
 
-
-
-
+![image](/IMG/selected_data.PNG)
 
 Next, we select locations for _M_ = 20 sensors. Here, for simplicity, we consider _ideal point_ measurement, i.e., each sensor measures the field exactly at that location. However, the scripts can be easily extended to those sensors that measure the field in a close vicinity to the location by changing the parameter "r_m". The locations of selected sensors are illustrated below. In addition, the rising $\beta$ after _M_ > _N_ indicates the good stability of the saddle-point problem.
 
+![image](/IMG/sensor_loc.PNG)
 
 Finally, we test the PBDW system by using the 127 _hidden_ snapshots. By saying _hidden_, it means that these snapshots do not participate in any previous procedures of building the PBDW system. The results below show good accuracy of the PBDW system.
+
+![image](/IMG/results.PNG)
 
