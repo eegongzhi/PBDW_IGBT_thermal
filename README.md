@@ -28,5 +28,16 @@ The project consists of 2 folders, 4 major scripts (each corresponding to a crit
 - The other .m scripts are utilities for Scripts a1 ~ a4.
 
 ## Results
+In this project, we run FEM simulations and generate 1271 snapshots. Each snapshot is the temperature field on the outer surface of an IGBT module. By running Script a1, we randomly select 127 snapshots as the _test set_ that is used in Script a4.
 
+Then, we choose _N_ = 6 snapshots from the remaining 1144 snapshots to build the background space. The labels of the selected snapshots, as well as the 1st and the 5th bases of the background space, are illustrated below.
+
+
+
+
+
+Next, we select locations for _M_ = 20 sensors. Here, for simplicity, we consider _ideal point_ measurement, i.e., each sensor measures the field exactly at that location. However, the scripts can be easily extended to those sensors that measure the field in a close vicinity to the location by changing the parameter "r_m". The locations of selected sensors are illustrated below. In addition, the rising $\beta$ after _M_ > _N_ indicates the good stability of the saddle-point problem.
+
+
+Finally, we test the PBDW system by using the 127 _hidden_ snapshots. By saying _hidden_, it means that these snapshots do not participate in any previous procedures of building the PBDW system. The results below show good accuracy of the PBDW system.
 
